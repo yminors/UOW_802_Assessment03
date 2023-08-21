@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>
+            Assessment 03
+        </title>
+        <script>
+		
+            // Task 4: javascript code
+            // create a function to display three buttons “Cat”, “Dog” and “Frog”.
+		    // when the button is clicked, the input field displays a message and the image of the corresponding animal is displayed
+           
+            // create a function to change the input field when frog button is clicked
+		    function catInput(){
+			// define a variable to get the HTML element we want to change - input element
+            var displayField = document.getElementById("inputDisplay");
+            // define a variable to get the HTML element we want to change - image element
+            var image = document.getElementById("imageDisplay");
+
+            // change the content of HTML element and highlight when clicked - input element
+            displayField.value = "User clicks Cat";
+            // change the content of HTML element - image element
+            image.src= "/images/cat.jpg";	
+		    }
+		    // create a function to change the input field when frog button is clicked
+		    function dogInput(){
+			// define a variable to get the HTML element we want to change - input element
+            var displayField = document.getElementById("inputDisplay");
+            // define a variable to get the HTML element we want to change - image element
+            var image = document.getElementById("imageDisplay");
+
+            // change the content of HTML element and highlight when clicked - input element
+            displayField.value = "User clicks Dog";
+            // change the content of HTML element - image element
+            image.src= "/images/dog.jpg";
+		    }
+		    // create a function to change the input field when frog button is clicked
+		    function frogInput(){
+			// define a variable to get the HTML element we want to change - input element
+            var displayField = document.getElementById("inputDisplay");
+            // define a variable to get the HTML element we want to change - image element
+            var image = document.getElementById("imageDisplay");
+
+            // change the content of HTML element and highlight when clicked - input element
+            displayField.value = "User clicks Frog";
+            // change the content of HTML element - image element
+            image.src= "/images/frog.jpg";
+		    }	
+        </script>
+    
+
+        <style>
+            /* Common styles */
+            body {
+                font-family: Arial, sans-serif;
+                padding: 10pc;
+            }
+
+            table {
+                width: 90%;
+                border-collapse: collapse;
+                margin: 20px auto;
+            }
+
+            th, td {
+                border: 1px solid #ccc;
+                padding: 10px;
+                text-align: left;
+            }
+
+            th {
+                background-color: #f2f2f2;
+            }
+
+            tr:nth-child(even) {
+                background-color: #f5f5f5;
+            }
+
+            /* style for imges used in web attack table */
+            .attack-image {
+                display: block; /* To ensure the border is applied below the image */
+                width: 400px;                       /* Set the desired width here */
+                margin: 0 auto;                     /*  center horizontally */
+                border-bottom: 2px solid #000; /* Add a line under the image */
+
+            }
+            .reference {
+               text-align: center; 
+               font: size 1px;;
+            }
+
+            /* This section contains styles for table for session dates */
+            /* common table styling */
+            .main-table {
+                font-family: "Helvetica", sans-serif; /* Use Helvetica font family */
+                width:80%;
+                margin: 0 auto;     /* center-aligh table (805 width of browser) */
+            }
+
+            /* Styling for tables inside .min-table */
+            .main-table table {
+                border: 10px solid green;   /* outside border colour*/
+                width:100%;
+                border-collapse: collapse;              /* collapse into a single border */
+                border-spacing: 5px;                    /* border bet cell spacing */
+            }
+            /* common styling for table header */
+            .main-table th {
+                text-align: center;                       /* centre align heading */
+                color: rgb(61, 88, 61);
+                font-size: 35px;
+            }
+            /* common styling for cells */
+            .main-table th,
+            .main-table td {  
+                padding: 10px;
+                font-size: 15px;                            /* add cell padding */
+                text-align: left;                         /* left allign text */
+                border: 1px solid greenyellow;     /* individual cell border */
+                
+            }
+            /* style for unordered list in main-table */
+            .main-table ul {
+                list-style-type: circle;                    /* set bullet-point type */
+                margin: 0;                                  /* remove default margin */
+                padding-left: 10ex;                         /* padding on the left for bullet points */
+            }
+            /* styling for even rows */
+            .main-table tr:nth-child(even){
+                background-color: gainsboro;              /* set background colour for even rows */
+                border-top: 2px dotted green;             /* border style for even rows */
+            }
+            /* stye for  odd rows*/
+            .main-table tr:nth-child(odd) {
+                background-color: plum; /* White background color for odd rows */
+                /*border-top: 2px dashed palevioletred; Outside border style for odd rows */
+            }
+            /* style for CENSUS DATE */
+            .census-date-heading{
+                /* background-color: red; */
+                font-size: 20;
+                color: white;
+                font-style: italic;
+            }
+            /* *********************************  REMOVE ********************************** */
+            /* This section contains styles for table for Web Attacks */
+            /* common table styling */
+            .cyber-attack-table {
+                background-color: ;
+                font-family: "Helvetica", sans-serif; /* Use Helvetica font family */
+                width:80%;
+                margin: 0 auto;     /* center-aligh table (805 width of browser) */
+                border: 10px;
+            }
+            /* Styling for tables inside .min-table */
+            .cyber-attack-table table {
+                /* border: 2px solid black;   /* outside border colour*/
+                width:100%;
+                border-collapse: collapse;              /* collapse into a single border */
+                border-spacing: 5px;                    /* border bet cell spacing */
+            }
+            .cyber-attack-table td {
+                border: 1px solid black;
+                border-collapse: collapse;
+            }
+
+             /* common styling for table header */
+            .cyber-attack-table th {
+                text-align: center;                       /* centre align heading */
+                color: blue;
+                font-size: 20px;
+            }
+        </style>
+    </head>
+ 
+<body>
+    <h1>My Key Dates</h1>
+    <!-- Create a table for census data; group styling under stycle class 'main-table' -->
+    <div class="main-table">
+        <table>
+            <caption><h2>2024 Spring session dates</h2></caption>
+            <!-- table header -->
+            <tr>
+                <th>Activity</th>
+                <th>Key Date</th>
+            </tr>
+            <!-- table rows -->
+            <tr>
+                <td>First day to enrol for re-enrolling (continuing students)</td>
+                <td>20 Nov 2023</td>
+            </tr>
+            <tr>
+                <td>Orientation</td>
+                <td>15 July 2024</td>
+            </tr>
+            <tr>
+                <td>Lectures Commence (weeks 1-10)</td>
+                <td>22 Jul - 27 Sep 2024</td>
+            </tr>
+            <tr>
+                <td>Last day to enrol / add subjects yourself</td>
+                <td>02 Aug 2024</td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="census-date-heading">
+                        CENSUS DATE
+                    </div>
+                <!-- add bullet points -->
+                    <ul>
+                        <li>Fees due</li>
+                        <li>Last day to withdraw from subject/s without paying for them</li>
+                        <li>HECS / FEE HELP debt reporting date</li>
+                        <li>Last day to change HECS / FEE HELP billing option</li>
+                    
+                    </ul>
+                </td>
+                <td>02 Aug 2024</td>
+                <tr>
+                    <td>Student Services and Amenities Fees Due</td>
+                    <td>01 Sep 2024</td>
+                </tr>
+            </tr>
+        </table>
+    </div>
+    <br>
+    <hr>
+    <h1>Common Web Attacks</h1>
+    <!-- Create a table for cyber attacks;  group styling under class 'cyber-attack-table' -->
+    <!-- <div class="cyber-attack-table"> -->
+        <table>
+            <!-- table header -->
+            <tr>
+                <th>Name</th>
+                <th>Web Attacks</th>
+            </tr>
+            <tr>
+                <td>
+                    Cross-Site Scripting (XSS)
+                    <br><br>
+                    <img src="images/cross_site_scripting2.png" alt="Attack 1" class="attack-image"> 
+                    <br>
+                    Source: https://www.invicti.com/blog/web-security/session-hijacking/
+                </td>
+                <td>Injection of malicious scripts into websites</td>
+            </tr>
+            <tr>
+                <td>
+                    Phishing
+                    <br><br>
+                    <img src="images/phishing.png" alt="Attack 1" class="attack-image"> 
+                    <br>
+                    Source:https://learning.mlytics.com/cyber-attacks/what-is-a-phishing-attack/
+                <td>
+                    <p>A social engineering attack, where an attacker sends emails pretending to come from a trusted source.</p>
+                    <a href="https://www.ibm.com/topics/phishing/">https://www.ibm.com</a>
+                </td>
+            </tr>   
+            <tr>
+                <td>
+                    Adware
+                    <br><br>
+                    <img src="images/adware.png" alt="Attack 1" class="attack-image"> 
+                    <br>
+                    Source:https://www.zenarmor.com/docs/network-security-tutorials/what-is-adware
+                </td>
+                <td>
+                    <p>
+                        Adware tracks a user's browsing activity to analyze behavior patterns and interests
+                        to enable advertisers to send the user targeted advertising.
+                    </p>
+                    <a href="https://www.imperva.com/learn/application-security/cyber-security-threats/">https://www.imperva.com</a>
+                </td>
+            </tr>          
+            <tr>
+                <td>SQL Injection</td>
+                <td>
+                <p> 
+                    SQL injection is a technique employed by attackers to implant harmful code into a server that relies on SQL, 
+                    to divulge information it would typically keep confidential</p>
+                <a href="https://www.cisco.com/c/en_au/products/security/common-cyberattacks.html#~types-of-cyber-attacks">https://www.cisco.com</a>
+                </td>
+            </tr>
+            <tr>
+                <td>Cross-Site Request Forgery (CSRF)</td>
+                <td>Performing actions on behalf of authenticated users</td>
+            </tr>
+            <tr>
+                <td>Distributed Denial of Service (DDoS)</td>
+                <td>Attackers overload a web server with a flood of requests to disrupt its service</td>
+            </tr>
+            <tr>
+                <td>Man-in-the-Middle (MitM) Attack</td>
+                <td>Attackers intercept and alter communication between two parties</td>
+            </tr>
+            <tr>
+                <td>Clickjacking</td>
+                <td>Attackers trick users into clicking on hidden malicious elements</td>
+            </tr>
+            <tr>
+                <td>Brute Force Attack</td>
+                <td>Attackers attempt to gain unauthorized access by trying various combinations of passwords</td>
+            </tr>
+            <tr>
+                <td>Phishing</td>
+                <td>Attackers deceive users into revealing sensitive information by posing as legitimate sources</td>
+            </tr>
+            <tr>
+                <td>Remote Code Execution (RCE)</td>
+                <td>Attackers exploit vulnerabilities to execute code on a remote server</td>
+            </tr>
+            <tr>
+                <td>XML External Entity (XXE) Attack</td>
+                <td>Attackers exploit vulnerable XML parsers to access internal or external files</td>
+            </tr>
+
+        </table>
+    <!-- </div> -->
+    <br>
+    <hr>
+    <h1>Buttons with Javascript</h1>  
+    	<!-- Task4 : html  -->
+	<!-- create buttons 'Cat', 'Dog', 'Frog' --> 
+	<button onclick="catInput()">Cat</button> 	    <!-- when clicked, call function 'catInput'-->
+    <button onclick="dogInput()">Dog</button> 	    <!-- when clicked, call function 'dogInput'-->
+    <button onclick="frogInput()">Frog</button>		<!-- when clicked, call function 'frogInput'-->
+	<br><br>										<!-- carriage returns to display input field below the buttons -->
+	<input type="text" id="inputDisplay" > 			<!-- Input field to display messages -->
+	<br><br>										<!-- 2x carriage return to display image below the buttons -->
+    <img id="imageDisplay" /> 						<!--  id to dispay the given image  -->	
+    <h1>Gihub repository</h1>
+	<!---<h1>Presentation of step 7a</h1>   -->
+    <!--link to screenshot of the webpage styled as required in step 7a -->
+    <h2><a href="report.html">Github Report</a></h2>
+	<hr>
+	<br>
+</body>
+</html>
