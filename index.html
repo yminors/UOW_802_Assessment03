@@ -22,7 +22,8 @@
             // change the content of HTML element and highlight when clicked - input element
             displayField.value = "User clicks Cat";
             // change the content of HTML element - image element
-            image.src= "/images/cat.jpg";	
+            image.src= "images/animals/cat.jpg";	
+            updateSourceReference("https://www.gettyimages.com.au/photos/dog-sitting");
 		    }
 		    // create a function to change the input field when frog button is clicked
 		    function dogInput(){
@@ -34,7 +35,8 @@
             // change the content of HTML element and highlight when clicked - input element
             displayField.value = "User clicks Dog";
             // change the content of HTML element - image element
-            image.src= "/images/dog.jpg";
+            image.src= "images/animals/dog.jpg";
+            updateSourceReference("https://www.gettyimages.com.au");
 		    }
 		    // create a function to change the input field when frog button is clicked
 		    function frogInput(){
@@ -46,16 +48,18 @@
             // change the content of HTML element and highlight when clicked - input element
             displayField.value = "User clicks Frog";
             // change the content of HTML element - image element
-            image.src= "/images/frog.jpg";
+            image.src= "images/animals/frog.jpg";
+            updateSourceReference("https://www.gettyimages.com.au");
 		    }	
         </script>
     
-
+ 
         <style>
             /* Common styles */
             body {
-                font-family: Arial, sans-serif;
-                padding: 10pc;
+                /* font-family: Arial, sans-serif; */
+                font-family: "Helvetica", sans-serif; /* Use Helvetica font family */
+                padding: 5pc;
             }
 
             table {
@@ -63,7 +67,6 @@
                 border-collapse: collapse;
                 margin: 20px auto;
             }
-
             th, td {
                 border: 1px solid #ccc;
                 padding: 10px;
@@ -72,19 +75,38 @@
 
             th {
                 background-color: #f2f2f2;
+                font-size: 50;
             }
 
             tr:nth-child(even) {
                 background-color: #f5f5f5;
             }
+            .info-box {
+                border: 4px solid green;
+                /* background-color:greenyellow; */
+                color:green;
+                padding: 20px;
+                margin: 0 auto;
+                max-width: 400px;
+                text-align: left;
+            }
+            .top-band {
+            background-color:green; /* Choose the desired background color for the band */
+            color: #fff; /* Text color inside the band */
+            padding: 20px 0; /* Adjust the padding to control the band's height */
+            text-align: center; /* Center-align the content inside the band */
+            }
 
+    .top-band h1 {
+        margin: 0; /* Remove any default margin */
+        font-size: 36px; /* Adjust the font size for the "Due Dates" text */
+    }
             /* style for imges used in web attack table */
             .attack-image {
                 display: block; /* To ensure the border is applied below the image */
-                width: 400px;                       /* Set the desired width here */
+                width: 500px;                       /* Set the desired width here */
                 margin: 0 auto;                     /*  center horizontally */
                 border-bottom: 2px solid #000; /* Add a line under the image */
-
             }
             .reference {
                text-align: center; 
@@ -95,22 +117,22 @@
             /* common table styling */
             .main-table {
                 font-family: "Helvetica", sans-serif; /* Use Helvetica font family */
-                width:80%;
+                width:90%;
                 margin: 0 auto;     /* center-aligh table (805 width of browser) */
             }
 
             /* Styling for tables inside .min-table */
             .main-table table {
-                border: 10px solid green;   /* outside border colour*/
+                border: 10px solid green;               /* outside border colour*/
                 width:100%;
                 border-collapse: collapse;              /* collapse into a single border */
-                border-spacing: 5px;                    /* border bet cell spacing */
+                border-spacing: 10px;                    /* border bet cell spacing */
             }
             /* common styling for table header */
             .main-table th {
                 text-align: center;                       /* centre align heading */
-                color: rgb(61, 88, 61);
-                font-size: 35px;
+                color: blueviolet;
+                font-size: 25px;
             }
             /* common styling for cells */
             .main-table th,
@@ -118,7 +140,7 @@
                 padding: 10px;
                 font-size: 15px;                            /* add cell padding */
                 text-align: left;                         /* left allign text */
-                border: 1px solid greenyellow;     /* individual cell border */
+                border: 2px dotted orange;     /* individual cell border */
                 
             }
             /* style for unordered list in main-table */
@@ -134,57 +156,37 @@
             }
             /* stye for  odd rows*/
             .main-table tr:nth-child(odd) {
-                background-color: plum; /* White background color for odd rows */
-                /*border-top: 2px dashed palevioletred; Outside border style for odd rows */
+                background-color:pink; /* White background color for odd rows */
             }
             /* style for CENSUS DATE */
             .census-date-heading{
-                /* background-color: red; */
                 font-size: 20;
-                color: white;
+                color: yellow;
                 font-style: italic;
-            }
-            /* *********************************  REMOVE ********************************** */
-            /* This section contains styles for table for Web Attacks */
-            /* common table styling */
-            .cyber-attack-table {
-                background-color: ;
-                font-family: "Helvetica", sans-serif; /* Use Helvetica font family */
-                width:80%;
-                margin: 0 auto;     /* center-aligh table (805 width of browser) */
-                border: 10px;
-            }
-            /* Styling for tables inside .min-table */
-            .cyber-attack-table table {
-                /* border: 2px solid black;   /* outside border colour*/
-                width:100%;
-                border-collapse: collapse;              /* collapse into a single border */
-                border-spacing: 5px;                    /* border bet cell spacing */
-            }
-            .cyber-attack-table td {
-                border: 1px solid black;
-                border-collapse: collapse;
-            }
-
-             /* common styling for table header */
-            .cyber-attack-table th {
-                text-align: center;                       /* centre align heading */
-                color: blue;
-                font-size: 20px;
             }
         </style>
     </head>
  
 <body>
-    <h1>My Key Dates</h1>
+    <header class="top-band">
+        <h1>My Key Dates</h1>
+    </header>
+    <br>
+    <!-- Task1: Dispay Assessment 03 details   -->
+    <div class="info-box">
+        <h1>8497606 Yamini Minors</h1>
+        <h2>COMP804: Web Security</h2>
+        <h3>Assignment 1 due date: August 31, 2023</h3>
+      </div>
+
     <!-- Create a table for census data; group styling under stycle class 'main-table' -->
     <div class="main-table">
         <table>
             <caption><h2>2024 Spring session dates</h2></caption>
             <!-- table header -->
             <tr>
-                <th>Activity</th>
-                <th>Key Date</th>
+                <th><h2>Activity</th>
+                <th><h2>Key Date</h2></th>
             </tr>
             <!-- table rows -->
             <tr>
@@ -228,8 +230,7 @@
     <br>
     <hr>
     <h1>Common Web Attacks</h1>
-    <!-- Create a table for cyber attacks;  group styling under class 'cyber-attack-table' -->
-    <!-- <div class="cyber-attack-table"> -->
+    <!-- Create a table for cyber attacks;  Common CSS styles apply -->
         <table>
             <!-- table header -->
             <tr>
@@ -240,29 +241,38 @@
                 <td>
                     Cross-Site Scripting (XSS)
                     <br><br>
-                    <img src="images/cross_site_scripting2.png" alt="Attack 1" class="attack-image"> 
+                    <img src="images/attacks/cross_site_scripting.png" alt="cross site scripting" class="attack-image"> 
                     <br>
                     Source: https://www.invicti.com/blog/web-security/session-hijacking/
                 </td>
-                <td>Injection of malicious scripts into websites</td>
+                <td>
+                    <p>
+                        Cross-Site Scripting (XSS), also referred to as XSS attacks, 
+                        empowers an attacker to run arbitrary JavaScript code within the browser of an unsuspecting victim user.
+                    </p>
+                    <a href="https://www.trendmicro.com/en_au/devops/23/e/cross-site-scripting-xss-attacks.html">https://www.trendmicro.com/en_au/devops/23/e/cross-site-scripting-xss-attacks.html</a>
+                </td>
             </tr>
             <tr>
                 <td>
                     Phishing
                     <br><br>
-                    <img src="images/phishing.png" alt="Attack 1" class="attack-image"> 
+                    <img src="images/attacks/phishing.png" alt="image of Phising attack" class="attack-image"> 
                     <br>
                     Source:https://learning.mlytics.com/cyber-attacks/what-is-a-phishing-attack/
-                <td>
-                    <p>A social engineering attack, where an attacker sends emails pretending to come from a trusted source.</p>
-                    <a href="https://www.ibm.com/topics/phishing/">https://www.ibm.com</a>
                 </td>
-            </tr>   
+                <td>
+                    <p>
+                        A social engineering attack, where an attacker sends emails pretending to come from a trusted source.
+                    </p>
+                    <a href="https://www.ibm.com/topics/phishing/">https://www.ibm.com/topics/phishing/</a>
+                </td>
+            </tr>
             <tr>
                 <td>
                     Adware
                     <br><br>
-                    <img src="images/adware.png" alt="Attack 1" class="attack-image"> 
+                    <img src="images/attacks/adware.png" alt="image of Adware attack" class="attack-image"> 
                     <br>
                     Source:https://www.zenarmor.com/docs/network-security-tutorials/what-is-adware
                 </td>
@@ -273,55 +283,127 @@
                     </p>
                     <a href="https://www.imperva.com/learn/application-security/cyber-security-threats/">https://www.imperva.com</a>
                 </td>
-            </tr>          
+            </tr> 
+
             <tr>
-                <td>SQL Injection</td>
                 <td>
-                <p> 
-                    SQL injection is a technique employed by attackers to implant harmful code into a server that relies on SQL, 
-                    to divulge information it would typically keep confidential</p>
-                <a href="https://www.cisco.com/c/en_au/products/security/common-cyberattacks.html#~types-of-cyber-attacks">https://www.cisco.com</a>
+                    SQL Injection
+                    <br><br>
+                    <img src="images/attacks/sql_injection.png" alt="image of SQL injection attack" class="attack-image"> 
+                    <br>
+                    Source:https://portswigger.net/web-security/sql-injection
+                </td>
+                <td>
+                    <p> 
+                        SQL injection is a technique employed by attackers to implant harmful code into a server that relies on SQL, 
+                        to divulge information it would typically keep confidential.
+                    </p>
+                    <a href="https://www.cisco.com/c/en_au/products/security/common-cyberattacks.html#~types-of-cyber-attacks">https://www.cisco.com</a>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    Cross-Site Request Forgery (CSRF)
+                    <br><br>
+                    <img src="images/attacks/csrf.png" alt="image of Cross-Site Request Forgery attack " class="attack-image"> 
+                    <br>
+                    Source:https://www.zenarmor.com/docs/network-security-tutorials/what-is-adware
+                </td>
+                <td>
+                    <p>
+                    Cross-Site Request Forgery (CSRF), also known as session riding or one-click attack, 
+                    enables an attacker to manipulate a victim user into unknowingly performing actions they did not intend to initiates.
+                    </p>
+                    <a href="https://www.cyber.gov.au/">https://www.cyber.gov.au/</a>
                 </td>
             </tr>
             <tr>
-                <td>Cross-Site Request Forgery (CSRF)</td>
-                <td>Performing actions on behalf of authenticated users</td>
+                <td>
+                    Distributed Denial of Service (DDoS)
+                    <br><br>
+                    <img src="images/attacks/ddos.jpg" alt="image for denial of service attack" class="attack-image"> 
+                    <br>
+                    Source:https://www.fortinet.com/resources/
+                </td>
+                <td>
+                    <p>
+                        Distributed Denial of Servic attack involves overwhelming a target system,large volume of traffic, from multiple sources (botnets).
+                        The aim is to exhaust resources and bandwidth, causing the targeted system to become slow or completely unavailable to legitimate users.  
+                    </p>
+                    <a href="https://www.f5.com/labs/learning-center/what-is-a-distributed-denial-of-service-attack/">https://www.f5.com/labs/learning-center/what-is-a-distributed-denial-of-service-attack/</a>
+                    
+                </td>
             </tr>
             <tr>
-                <td>Distributed Denial of Service (DDoS)</td>
-                <td>Attackers overload a web server with a flood of requests to disrupt its service</td>
+                <td>
+                    Man-in-the-Middle (MIM) Attack
+                    <br><br>
+                    <img src="images/attacks/man-In-middle.png" alt="Image of man in the middle attack" class="attack-image"> 
+                    <br>
+                    Source:https://www.geeksforgeeks.org/how-to-prevent-man-in-the-middle-attack/
+                </td>
+                <td>
+                    <P>
+                        Attackers intercept and alter communication between two parties.
+                        By doing so, the attacker can create the illusion of a normal information 
+                        exchange taking place while they secretly monitor or manipulate the communication.
+                    </P>
+                    <a href="https://www.geeksforgeeks.org/how-to-prevent-man-in-the-middle-attack/">https://www.geeksforgeeks.org/how-to-prevent-man-in-the-middle-attack/</a>
+                    Source:
+                </td>
             </tr>
             <tr>
-                <td>Man-in-the-Middle (MitM) Attack</td>
-                <td>Attackers intercept and alter communication between two parties</td>
+                <td>
+                    DNS Spoofing
+                    <br><br>
+                    <img src="images/attacks/DNS-Spoofing.png" alt="Image of DNS spoofing attack" class="attack-image"> 
+                    <br>
+                    Source:https://www.cloudns.net/blog/dns-spoofing-dns-poisoning/
+                </td>
+                <td>
+                    <p>
+                        DNS spoofing, also known as DNS cache poisoning, is an attack that involves manipulating the DNS resolution process. 
+                        In this attack, the attacker sends false DNS responses to redirect users to malicious websites or incorrect IP addresses. It's a method of tricking users' devices i
+                        nto connecting to the wrong destination, potentially leading to data theft or other malicious actions.
+                    </p>
+                    <a href="https://www.cloudns.net/blog/dns-spoofing-dns-poisoning/">https://www.cloudns.net/blog/dns-spoofing-dns-poisoning/</a>
+                </td>
             </tr>
             <tr>
-                <td>Clickjacking</td>
-                <td>Attackers trick users into clicking on hidden malicious elements</td>
+                <td>
+                    Brute Force Attack
+                    <br><br>
+                    <img src="images/attacks/brute_force.jpg" alt="Image of brute force attack" class="attack-image"> 
+                    <br>
+                    Source:https://www.bankinfosecurity.com/blogs/credential-stuffing-attacks-vs-brute-force-attacks-p-2767
+
+                </td>
+
+                <td>
+                    <p>
+                        A brute force attack is a hacking technique that involves systematically attempting all possible combinations of passwords, 
+                        login credentials, or encryption keys in order to gain unauthorized access.
+                    </p>
+                    <a href="https://www.fortinet.com/resources/cyberglossary/brute-force-attack">https://www.fortinet.com/resources/cyberglossary/brute-force-attack</a>
+                </td>
             </tr>
             <tr>
-                <td>Brute Force Attack</td>
-                <td>Attackers attempt to gain unauthorized access by trying various combinations of passwords</td>
-            </tr>
-            <tr>
-                <td>Phishing</td>
-                <td>Attackers deceive users into revealing sensitive information by posing as legitimate sources</td>
-            </tr>
-            <tr>
-                <td>Remote Code Execution (RCE)</td>
+                <td>
+                    Remote Code Execution (RCE)
+                    <br><br>
+                    <img src="images/attacks/rce.png" alt="Image of Remote code execution attack" class="attack-image"> 
+                    <br>
+                    Source:https://beaglesecurity.com/blog/vulnerability/remote-code-execution.html
+                </td>
                 <td>Attackers exploit vulnerabilities to execute code on a remote server</td>
             </tr>
-            <tr>
-                <td>XML External Entity (XXE) Attack</td>
-                <td>Attackers exploit vulnerable XML parsers to access internal or external files</td>
-            </tr>
-
         </table>
     <!-- </div> -->
     <br>
     <hr>
     <h1>Buttons with Javascript</h1>  
-    	<!-- Task4 : html  -->
+    	<!-- Task4 : html elements  -->
 	<!-- create buttons 'Cat', 'Dog', 'Frog' --> 
 	<button onclick="catInput()">Cat</button> 	    <!-- when clicked, call function 'catInput'-->
     <button onclick="dogInput()">Dog</button> 	    <!-- when clicked, call function 'dogInput'-->
@@ -330,6 +412,7 @@
 	<input type="text" id="inputDisplay" > 			<!-- Input field to display messages -->
 	<br><br>										<!-- 2x carriage return to display image below the buttons -->
     <img id="imageDisplay" /> 						<!--  id to dispay the given image  -->	
+    <!-- Task5: HTML elements -->
     <h1>Gihub repository</h1>
 	<!---<h1>Presentation of step 7a</h1>   -->
     <!--link to screenshot of the webpage styled as required in step 7a -->
